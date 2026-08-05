@@ -94,9 +94,7 @@ TILES = [
         "badge": "Iris",
         "meta": " ",
         "icon": "Icons/ET_Landing/Module_CostOI.png",
-        "href": "https://bainandcompany.sharepoint.com/:p:/r/sites/pubs/_layouts/15/"
-                "Doc.aspx?sourcedoc=%7B3FC5CAA4-D6EA-42CF-B47A-BBDFF834973D%7D&file=GlobalWealthM"
-                "anagementEnterpriseTechnologyPOV.pptx&action=edit&mobileredirect=true",
+        "href": "https://iris.bain.com/content-viewer/EJDSCV",
     },
     {
         "title": "Thinker, Doer, Watcher Analysis",
@@ -110,9 +108,7 @@ TILES = [
         "badge": "Iris",
         "meta": " ",
         "icon": "Icons/ET_Landing/connecting-icon.jpg",
-        "href": "https://bainandcompany.sharepoint.com/:p:/r/sites/pubs/_layouts/15/doc2.asp"
-                "x?sourcedoc=%7B30CF4BD2-5647-4A03-9C98-990012CEED66%7D&file=241212_Outside-in%20SKU"
-                "%20for%20TDW_2024.pptx&action=edit&mobileredirect=true",
+        "href": "https://iris.bain.com/content-viewer/I15L1J",
     },
 ]
 

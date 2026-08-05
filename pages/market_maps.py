@@ -99,7 +99,7 @@ TILES = [
         "badge": "On Demand",
         "meta": " ",
         "icon": "Icons/Strategy_Landing/market-overview-mm.jpg",
-        "href": "https://bainandcompany-my.sharepoint.com/:p:/g/personal/bakul_napalchyal_bain_com/IQBFkNjoOL2eSJAQOFHwbrNFAaMyXlAexJnZgzZgH-ktG0M?e=54Nvnv",
+        "href": "https://iris.bain.com/content-viewer/CPUGMO",
     },
     {
         "title": "Germany Market Map",
@@ -114,14 +114,7 @@ TILES = [
         "badge": "On Demand",
         "meta": " ",
         "icon": "Icons/Strategy_Landing/market-overview-mm.jpg",
-        "href": "https://bainandcompany.sharepoint.com/:p:/r/sites/pubs/_layouts/15/Doc.asp"
-                "x?sourcedoc=%7B448A8268-0066-4812-B078-42D23B6C91C8%7D&file=WealthManagementPOVUK2022.pptx&action=edit&m"
-                "obileredirect=true&isSPOFile=1&xsdata=MDV8MDJ8fDc1MzE2NTdjODJmNzRiNGJjM2UxMDhkZWYxMjlmZWJlfGViMTIwZTEyNjVmMTQ3N2FiZThjZm"
-                "U0ZjY1OTI2NzI0fDB8MHw2MzkyMTMzNTk4MDMwNTcxMjF8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY2"
-                "5acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2"
-                "pFeE9ESXlaakZrTFdZMFltWXROR1UyT0MxaU56WXpMVEkzT1RrelpqQmhPRFE0TVY5ak1UWXpNamcyTWkwelpEbGlMVFF6WkdNdFlqQTRZeTFqWXpGbVpURXpObVpqWldKQWRXN"
-                "XhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjNE5UY3pPVEUzT1RVeE13PT18ODllZjdlYmRjMjNhNDcyNDI2ZmUwOGRlZjEyOWZlYmV8YmMzMWRjNTI4OTFlNDZhMzk4M2F"
-                "jNDAxYzgzNzdiZDI%3D&sdata=MTdMc3VDNDQyd2VoV0R5c2IvTVRkUXNGTTY3Y2wyaDJwMTFGUlVIbFBoYz0%3D&ovuser=eb120e12-65f1-477a-be8c-fe4f65926724%2CAditya.A%40bain.com",
+        "href": "https://iris.bain.com/content-viewer/5O89K8",
     },
 ]
 
