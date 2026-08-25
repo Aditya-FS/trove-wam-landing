@@ -2,6 +2,13 @@ from dash import html, dcc
 import dash
 
 
+def coming_soon_ribbon(label="COMING SOON"):
+    return html.Div(
+        html.Div(label, className="strat-coming-soon-ribbon"),
+        className="strat-coming-soon-ribbon-wrap",
+    )
+
+
 def module_page(title: str, links=None, note=None):
     links = links or []
     children = [

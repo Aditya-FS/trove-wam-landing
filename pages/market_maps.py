@@ -3,15 +3,16 @@ import os
 import dash
 from dash import html, register_page
 
+from page_helpers import coming_soon_ribbon
+
 register_page(
     __name__,
     path="/strategy/market-maps/",
-    name="Market Maps",
-    title="Market Maps | TROVE WAM",
+    name="Asset Management Market Maps",
+    title="Asset Management Market Maps | TROVE WAM",
 )
 
 RED = "#C00000"
-GREY_BAR = "#5a5a5a"
 _ASSETS = os.path.join(os.path.dirname(os.path.dirname(__file__)), "assets")
 _BLACK_T = 30
 
@@ -87,185 +88,159 @@ def _icon_url(icon_rel: str | None = None) -> str:
 
 TILES = [
     {
-        "title": "UK Market Map",
+        "title": "EMEA",
+        "ribbon": "W.I.P",
         "desc": (
-            "A high-level overview of the competitive landscape, highlighting key players,"
-            " market segments, emerging trends, and strategic positioning to provide a comprehensive"
-            " view of the ecosystem."
+            "A comprehensive view of the EMEA Asset Management landscape,"
+            " highlighting key players, market segments, emerging trends,"
+            " and strategic positioning across the region."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
-        "live": False,
-        "badge": "On Demand",
-        "meta": " ",
         "icon": "Icons/Strategy_Landing/market-overview-mm.jpg",
-        "href": "https://iris.bain.com/content-viewer/CPUGMO",
+        "href": "https://bainandcompany-my.sharepoint.com/:p:/g/personal/prachi_jain_bain_com/IQCyz2_kVgvyQpHWhrZsxS4mAcrYIoM2xtX7X6uSUN3IRDQ?e=LS7gBW",
     },
     {
-        "title": "Germany Market Map",
+        "title": "Americas",
+        "ribbon": "COMING SOON",
         "desc": (
-            "A high-level overview of the competitive landscape, highlighting key players,"
-            " market segments, emerging trends, and strategic positioning to provide a comprehensive"
-            " view of the ecosystem."
+            "A comprehensive view of the Americas Asset Management landscape,"
+            " highlighting key players, market segments, emerging trends,"
+            " and strategic positioning across the region."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
-        "live": False,
-        "badge": "On Demand",
-        "meta": " ",
         "icon": "Icons/Strategy_Landing/market-overview-mm.jpg",
-        "href": "https://iris.bain.com/content-viewer/5O89K8",
+        "href": "#",
+    },
+    {
+        "title": "APAC",
+        "ribbon": "COMING SOON",
+        "desc": (
+            "A comprehensive view of the APAC Asset Management landscape,"
+            " highlighting key players, market segments, emerging trends,"
+            " and strategic positioning across the region."
+        ),
+        "extra_label": "Contact:",
+        "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
+        "icon": "Icons/Strategy_Landing/market-overview-mm.jpg",
+        "href": "#",
     },
 ]
 
 
 def _tile(t: dict):
-    live = t["live"]
-    return html.A(
-        [
-            html.Div(
-                [
-                    html.Div(
-                        html.Img(
-                            src=_icon_url(t.get("icon")),
-                            alt="Market Maps",
+    ribbon_label = t.get("ribbon", "COMING SOON")
+
+    tile_body = [
+        html.Div(
+            [
+                html.Div(
+                    html.Img(
+                        src=_icon_url(t.get("icon")),
+                        alt="Market Maps",
+                        style={
+                            "width": "120px",
+                            "height": "120px",
+                            "objectFit": "contain",
+                            "display": "block",
+                            "flexShrink": "0",
+                            "background": "transparent",
+                        },
+                    ),
+                    style={
+                        "flex": "0 0 40%",
+                        "width": "40%",
+                        "maxWidth": "40%",
+                        "display": "flex",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "alignSelf": "stretch",
+                        "minHeight": "140px",
+                        "boxSizing": "border-box",
+                        "background": "transparent",
+                        "marginRight": "8px",
+                        "overflow": "hidden",
+                    },
+                ),
+                html.Div(
+                    [
+                        html.H3(
+                            t["title"],
                             style={
-                                "width": "120px",
-                                "height": "120px",
-                                "objectFit": "contain",
-                                "display": "block",
-                                "flexShrink": "0",
-                                "background": "transparent",
+                                "margin": "0 0 10px",
+                                "fontSize": "1.08rem",
+                                "fontWeight": "800",
+                                "color": RED,
+                                "lineHeight": "1.25",
+                                "fontFamily": "Arial, Helvetica, sans-serif",
                             },
                         ),
-                        style={
-                            "flex": "0 0 40%",
-                            "width": "40%",
-                            "maxWidth": "40%",
-                            "display": "flex",
-                            "alignItems": "center",
-                            "justifyContent": "center",
-                            "alignSelf": "stretch",
-                            "minHeight": "140px",
-                            "boxSizing": "border-box",
-                            "background": "transparent",
-                            "marginRight": "8px",
-                            "overflow": "hidden",
-                        },
-                    ),
-                    html.Div(
-                        [
-                            html.H3(
-                                t["title"],
-                                style={
-                                    "margin": "0 0 10px",
-                                    "fontSize": "1.08rem",
-                                    "fontWeight": "800",
-                                    "color": RED,
-                                    "lineHeight": "1.25",
-                                    "fontFamily": "Arial, Helvetica, sans-serif",
-                                },
-                            ),
-                            html.P(
-                                t["desc"],
-                                style={
-                                    "margin": "0 0 12px",
-                                    "fontSize": "0.86rem",
-                                    "color": "#555",
-                                    "lineHeight": "1.45",
-                                    "fontFamily": "Arial, Helvetica, sans-serif",
-                                },
-                            ),
-                            html.P(
-                                [
-                                    html.Span(
-                                        t["extra_label"],
-                                        style={
-                                            "fontWeight": "700",
-                                            "color": "#444",
-                                            "fontStyle": "normal",
-                                        },
-                                    ),
-                                    html.Span(
-                                        t["extra_value"],
-                                        style={"fontStyle": "italic", "color": "#555"},
-                                    ),
-                                ],
-                                style={
-                                    "margin": "0",
-                                    "fontSize": "0.8rem",
-                                    "lineHeight": "1.4",
-                                },
-                            ),
-                        ],
-                        style={
-                            "flex": "1 1 60%",
-                            "width": "60%",
-                            "maxWidth": "60%",
-                            "minWidth": "0",
-                            "paddingLeft": "10px",
-                            "paddingRight": "4px",
-                            "boxSizing": "border-box",
-                        },
-                    ),
-                ],
-                style={
-                    "display": "flex",
-                    "flexDirection": "row",
-                    "alignItems": "center",
-                    "gap": "4px",
-                    "padding": "20px 16px 14px",
-                    "flex": "1 1 auto",
-                    "minHeight": "0",
-                },
-            ),
-            html.Div(
-                [
-                    html.Span(
-                        t["badge"],
-                        style={
-                            "display": "inline-flex",
-                            "alignItems": "center",
-                            "padding": "7px 16px",
-                            "fontSize": "0.8rem",
-                            "fontWeight": "700",
-                            "color": "#fff",
-                            "background": RED if live else GREY_BAR,
-                            "borderRadius": "0 10px 0 0",
-                            "fontFamily": "Arial, Helvetica, sans-serif",
-                        },
-                    ),
-                    html.Span(
-                        t["meta"],
-                        style={
-                            "display": "flex",
-                            "alignItems": "center",
-                            "padding": "0 14px",
-                            "fontSize": "0.78rem",
-                            "color": "#999",
-                            "whiteSpace": "nowrap",
-                            "fontFamily": "Arial, Helvetica, sans-serif",
-                        },
-                    ),
-                ],
-                style={
-                    "display": "flex",
-                    "alignItems": "stretch",
-                    "justifyContent": "space-between",
-                    "minHeight": "34px",
-                    "marginTop": "auto",
-                },
-            ),
-        ],
+                        html.P(
+                            t["desc"],
+                            style={
+                                "margin": "0 0 12px",
+                                "fontSize": "0.86rem",
+                                "color": "#555",
+                                "lineHeight": "1.45",
+                                "fontFamily": "Arial, Helvetica, sans-serif",
+                            },
+                        ),
+                        html.P(
+                            [
+                                html.Span(
+                                    t["extra_label"],
+                                    style={
+                                        "fontWeight": "700",
+                                        "color": "#444",
+                                        "fontStyle": "normal",
+                                    },
+                                ),
+                                html.Span(
+                                    t["extra_value"],
+                                    style={"fontStyle": "italic", "color": "#555"},
+                                ),
+                            ],
+                            style={
+                                "margin": "0",
+                                "fontSize": "0.8rem",
+                                "lineHeight": "1.4",
+                            },
+                        ),
+                    ],
+                    style={
+                        "flex": "1 1 60%",
+                        "width": "60%",
+                        "maxWidth": "60%",
+                        "minWidth": "0",
+                        "paddingLeft": "10px",
+                        "paddingRight": "4px",
+                        "boxSizing": "border-box",
+                    },
+                ),
+            ],
+            style={
+                "display": "flex",
+                "flexDirection": "row",
+                "alignItems": "center",
+                "gap": "4px",
+                "padding": "20px 16px 14px",
+                "flex": "1 1 auto",
+                "minHeight": "0",
+            },
+        ),
+    ]
+
+    return html.A(
+        html.Div(
+            [coming_soon_ribbon(ribbon_label), *tile_body],
+            className="strat-tile-inner",
+        ),
         href=t.get("href", "#"),
+        className="strat-tile-has-ribbon",
         style={
             "display": "flex",
             "flexDirection": "column",
-            "background": "#fff",
-            "border": "1px solid #e0e0e0",
-            "borderRadius": "24px",
-            "boxShadow": "0 2px 10px rgba(0,0,0,0.10)",
-            "overflow": "hidden",
             "textDecoration": "none",
             "color": "inherit",
             "minHeight": "0",
@@ -277,7 +252,7 @@ def _tile(t: dict):
 layout = html.Div(
     [
         html.H1(
-            "Market Maps",
+            "Asset Management Market Maps",
             style={
                 "fontSize": "clamp(1.25rem, 1.85vw, 1.55rem)",
                 "fontWeight": "800",
@@ -290,8 +265,9 @@ layout = html.Div(
         ),
         html.P(
             [
-                "Explore Wealth & Asset Management market maps by geography, product, "
-                "and competitive landscape. Select a tile below — packs are available on demand.",
+                "A structured view of the Asset Management landscape, providing insights into market structure,"
+            " key participants, and opportunity pools across regions. "
+            "Designed to support market assessment, competitive understanding, and opportunity identification.",
             ],
             style={
                 "color": "#777",

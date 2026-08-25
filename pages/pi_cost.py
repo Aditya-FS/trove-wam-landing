@@ -89,8 +89,11 @@ TILES = [
     {
         "title": "Cost Benchmarking",
         "desc": (
-            "Peer cost benchmarking across WAM functions compare cost-to-income, "
-            "operating expense ratios, and efficiency levers against relevant peers."
+            "Peer-based cost benchmarking across WAM functions, "
+            "enabling comparison of cost-to-income ratios, "
+            "operating expense levels, and key efficiency metrics against "
+            "relevant peers. The analysis helps identify performance gaps "
+            "and potential areas for improvement."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -101,25 +104,30 @@ TILES = [
         "href": "mailto:NewDelhiBCNFSWAM@Bain.com",
     },
     {
-        "title": "Cost Compass",
+        "title": "Cost Out Compass",
         "desc": (
-            "Comprehensive cost-out tool that combines global Financial Services experience,"
-            " making cost-out sizing for proposals faster and higher quality."
-            " Contains full potential cost out ranges (% of cost saved) in a MECE taxonomy."
+            "A comprehensive cost transformation tool drawing on global "
+            "Financial Services experience to support faster and more "
+            "rigorous cost-out assessment. It provides potential cost reduction"
+            " ranges across a structured MECE taxonomy, helping teams"
+            " identify and prioritize efficiency opportunities."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
         "live": False,
-        "badge": "On Demand",
+        "badge": "Iris",
         "meta": " ",
         "icon": "Icons/PICost_Landing/capital_market_cds.jpg",
-        "href": "mailto:NewDelhiBCNFSWAM@Bain.com",
+        "href": "https://iris.bain.com/content-viewer/03SRJJ",
     },
     {
         "title": "IT Investment",
         "desc": (
-            "IT investment and technology spend analytics for wealth and asset "
-            "managers portfolio mix, run-vs-change and peer technology intensity."
+            "Structured IT investment and technology spend analytics for "
+            "Wealth & Asset Management, providing insights into portfolio"
+            " mix, run-versus-change expenditure, and peer technology intensity."
+            " The analysis supports benchmarking of technology investment "
+            "and evaluation of strategic spending priorities."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -132,9 +140,10 @@ TILES = [
     {
         "title": "Workforce Analytics",
         "desc": (
-            "Comparative analysis to understand FTE trends across"
-            " different support functions. Also provides multiple other"
-            " FTE trends such as hiring, attrition, gender diversity etc."
+            "Comparative workforce analytics across key business functions, providing visibility "
+            "into FTE levels and workforce trends. The analysis also covers selected"
+            " people metrics, including hiring, attrition, and gender diversity, "
+            "to support workforce planning and organizational assessment."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -318,10 +327,11 @@ layout = html.Div(
         ),
         html.P(
             [
-                "Provides comprehensive analysis for WAM sector in terms "
-                "of performance improvement via tools such as cost benchmarking, "
-                "cost out compass, IT investment spend analysis, "
-                "branch rationalization, workforce analysis.",
+                "Access a comprehensive suite of performance improvement "
+                "and cost analytics for the WAM sector, spanning cost benchmarking, "
+                "Cost Out Compass, IT investment analysis, and Workforce analytics. "
+                "These tools support fact-based assessment of efficiency, "
+                "investment priorities, and operating model opportunities.",
             ],
             style={
                 "color": "#777",

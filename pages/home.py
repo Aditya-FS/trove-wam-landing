@@ -25,41 +25,67 @@ def _pick_image(*candidates: str) -> str:
 TILES = [
     {
         "label": "Strategy",
-        "detail": "KPI Benchmarking, Liquid Asset Dashboard, Market Maps, Market Sizing",
-        "hover": "Access wealth and asset management insights for WAM, featuring AM & WM dashboards, Liquid Assets Dashboard, Market Maps, WM decks, and competitive market intelligence.",
+        "detail": "KPI Benchmarking, Liquid Assets Dashboard, Market Maps, Alternative Market Sizing, Wealth Management Decks ",
+        "hover": "Access a comprehensive suite of WAM strategy and market intelligence resources, "
+                "including financial KPI benchmarking, liquid asset dashboards, market maps, market sizing, Wealth Management decks, "
+                "and competitive market insights. These tools bring together relevant data and perspectives to support benchmarking,"
+                " market assessment, and strategic decision-making.",
         "href": "/strategy/",
         "image": _pick_image("Strategy.jpg"),
     },
     {
         "label": "Capital Markets",
         "detail": "TSR, BGW ",
-        "hover": "Comparative analysis of global Wealth & Asset players on capital market metrics such as TSR and BWG.",
+        "hover": "Access focused capital markets analytics for the WAM sector, "
+                "combining Total Shareholder Return (TSR) benchmarking with BGW analysis. "
+                "These tools provide structured perspectives on market "
+                "performance, value creation, strategic positioning, and future growth potential.",
         "href": "/capital-markets/",
         "image": _pick_image(
             "Capital Market.jpg"
         ),
     },
     {
-        "label": "PI/Cost",
-        "detail": "Cost Benchmarking, Cost Compass, IT Investment, Workforce Analysis",
-        "hover": "Provides comprehensive analysis for WAM sector in terms of performance improvement via tools such as cost"
-                 " benchmarking, cost out compass, IT investment spend analysis, branch rationalization, workforce analysis.",
+        "label": "PI/ Cost",
+        "detail": "Cost Benchmarking, Cost Out Compass, IT Investment, Workforce Analysis",
+        "hover": "Access a comprehensive suite of performance improvement "
+                "and cost analytics for the WAM sector, spanning cost benchmarking, "
+                "Cost Out Compass, IT investment analysis, and workforce analytics. "
+                "These tools support fact-based assessment of efficiency, "
+                "investment priorities, and operating model opportunities.",
         "href": "/pi-cost/",
         "image": _pick_image("PICost.jpg"),
     },
     {
         "label": "ET",
         "detail": "ET Regression, Thinker Doer Watcher Analysis  ",
-        "hover": "Comparative analysis on ET analysis covering ET regression and Thinker, doer, watcher analysis.",
+        "hover": "Access targeted performance driver and operating model "
+                "analytics for the WAM sector, combining ET Regression with Thinker / Doer / Watcher analysis. "
+                "These tools support a structured assessment of performance drivers, "
+                "organizational roles, capacity, and decision rights.",
         "href": "/et/",
         "image": _pick_image("ET.jpg"),
     },
     {
         "label": "Customer",
-        "detail": "Coming soon",
-        "hover": "Customer modules coming soon.",
+        "detail": "Social Sentiment Analysis",
+        "hover": "Access focused customer insight"
+                " and market sentiment analytics "
+                "for the WAM sector, designed to provide a clearer "
+                "understanding of customer perceptions, brand positioning, "
+                "and emerging market signals.",
         "href": "/customer/",
         "image": _pick_image("Customer.jpg"),
+    },
+    {
+        "label": "M&A",
+        "detail": "Mergers & Acquisitions analytics",
+        "hover": "Access focused M&A analytics for "
+                "the WAM sector, providing structured perspectives on transaction activity,"
+                " market dynamics, valuations, and strategic "
+                "deal trends across Wealth & Asset Management.",
+        "href": "/ma/",
+        "image": _pick_image("MA.jpg"),
     },
 ]
 
@@ -110,9 +136,10 @@ layout = html.Div(
                         ),
                         html.P(
                             [
-                                "WAM Trove is a comprehensive platform offering consolidated data and insights for ",
-                                "Wealth & Asset Management markets across key modules including Asset ",
-                                "Management KPIs, Wealth Management KPIs, TSR, Sector Analysis, Market Maps and more. ",
+                                "WAM Trove is a comprehensive platform that brings together consolidated data, "
+                                "market intelligence, and actionable insights across the Wealth & Asset Management sector."
+                                " It provides a unified view across key modules, including Asset Management KPIs, Wealth Management KPIs,"
+                                " TSR, Sector Analysis, Market Maps and more. Enabling users to efficiently access and navigate relevant market knowledge. ",
                             ],
                             className="home-hero-text",
                         ),
@@ -120,11 +147,11 @@ layout = html.Div(
                             [
                                 "Please click ",
                                 html.A("here", href="https://iris.bain.com/content-viewer/4H5X64", className="home-hero-link"),
-                                " for the credentials deck, You may also reach out to ",
+                                " for the TROVE WAM credentials deck, You may also reach out to ",
                                 html.A("Sukrita Bhatia", href="mailto:Sukrita.Bhatia@Bain.com", className="home-hero-link"),
                                 " and ",
                                 html.A("Sarang Deva", href="mailto:Sarang.Deva@Bain.com", className="home-hero-link"),
-                                " for the further queries ",
+                                " for any further queries ",
                                 ".",
                             ],
                             className="home-hero-text",

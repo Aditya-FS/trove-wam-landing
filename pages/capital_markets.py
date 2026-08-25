@@ -89,9 +89,11 @@ TILES = [
     {
         "title": "TSR",
         "desc": (
-            "Total Shareholder Return analytics for capital markets  peer "
-            "benchmarking, value creation drivers, and performance attribution "
-            "across listed and private players."
+            "Comprehensive Total Shareholder Return analytics "
+            "supporting peer benchmarking across capital "
+            "markets. The analysis provides insights into "
+            "value creation drivers and performance "
+            "attribution across listed and private players."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -104,9 +106,10 @@ TILES = [
     {
         "title": "BGW",
         "desc": (
-            "BGW analytics for capital markets, classifying companies into"
-            " four strategic archetypes based on current growth, "
-            "operational performance, and future growth potential."
+            "Structured BGW analysis for capital markets, classifying companies across four "
+            "strategic archetypes based on current growth, operational performance,"
+            " and future growth potential. The analysis supports "
+            "a clearer understanding of relative positioning and strategic outlook."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -290,8 +293,10 @@ layout = html.Div(
         ),
         html.P(
             [
-                "Comparative analysis of global Wealth & Asset players"
-                " on capital market metrics such as TSR and BWG.",
+                "Access focused capital markets analytics for the WAM sector, "
+                "combining Total Shareholder Return (TSR) benchmarking with BGW analysis. "
+                "These tools provide structured perspectives on market "
+                "performance, value creation, strategic positioning, and future growth potential.",
             ],
             style={
                 "color": "#777",

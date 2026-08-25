@@ -83,9 +83,11 @@ TILES = [
     {
         "title": "Asset Management Financial KPIs Benchmark",
         "desc": (
-            "A one-stop interactive dashboard that consolidates Asset Management "
-            "revenue, AUM, and profitability pools — enabling peer benchmarking "
-            "and drill-downs by product and region."
+            "An interactive benchmarking dashboard providing a consolidated view of key"
+            " Asset Management metrics, including revenue, AUM, ROE, and productivity"
+            " indicators. Compare performance across peers by ownership type—public or private—and analyze detailed "
+            "cost structures, including personnel expenses, depreciation, amortisation, and impairment. "
+            "Explore deeper insights across products, regions, and operating models."
         ),
         "extra_label": "Products Covered:",
         "extra_value": " AM Peer Benchmarking ",
@@ -98,9 +100,11 @@ TILES = [
     {
         "title": "Wealth Management Financial KPIs Benchmark",
         "desc": (
-            "A one-stop interactive dashboard that consolidates Wealth Management "
-            "revenue, AUM, and profitability pools — enabling peer benchmarking "
-            "and drill-downs by product and region."
+            "An interactive benchmarking dashboard providing a consolidated view of key"
+            " Wealth Management metrics, including revenue, AUM, ROE, and productivity"
+            " indicators. Compare performance across peers by ownership type—public or private—and analyze detailed "
+            "cost structures, including personnel expenses, depreciation, amortisation, and impairment. "
+            "Explore deeper insights across products, regions, and operating models."
         ),
         "extra_label": "Products Covered:",
         "extra_value": " WM Peer Benchmarking ",
@@ -111,10 +115,11 @@ TILES = [
         "href": "https://us-east-1.online.tableau.com/#/site/casepracticeproduct/views/WealthManagementFinancialKPIsbenchmark2017-2024/Cover?:iid=1",
     },
     {
-        "title": "Market Map",
+        "title": "Asset Management Market Maps",
         "desc": (
-            "Market maps outlining the Wealth & Asset Management landscape "
-            "structure, participants, and opportunity pools. Shared on request."
+            "A structured view of the Asset Management landscape, providing insights into market structure,"
+            " key participants, and opportunity pools across regions. "
+            "Designed to support market assessment, competitive understanding, and opportunity identification."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -127,9 +132,9 @@ TILES = [
     {
         "title": "Wealth Management Decks",
         "desc": (
-            "A drill-down interactive dashboard that consolidates Asset Management"
-            "revenues, AUM and profitability data "
-            "allowing trend benchmarking and drill-downs by product and region."
+            "A detailed resource bringing together key Wealth Management "
+            "market and performance insights. Explore revenues, AUM, profitability,"
+            " and underlying trends, with the ability to benchmark performance and drill down by product and region."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -137,14 +142,15 @@ TILES = [
         "badge": "On Demand",
         "meta": " ",
         "icon": "Icons/Strategy_Landing/capital_market_cds.jpg",
-        "href": "mailto:NewDelhiBCNFSWAM@Bain.com",
+        "href": dash.get_relative_path("/strategy/wealth-management-decks/"),
     },
     {
-        "title": "Liquid asset dashboard",
+        "title": "Liquid Assets Dashboard",
         "desc": (
-            "Interactive dashboard providing insights into Liquid Asset revenues, AUM, profitability, and market trends,"
-            "enabling peer benchmarking and drill-downs by product and region. "
-            "and portfolio composition for WAM decision support."
+            "An interactive dashboard providing a comprehensive view of Liquid Assets revenues, AUM, profitability, "
+            "and market trends. The dashboard enables peer benchmarking and detailed analysis by "
+            "product and region, while also providing insights into "
+            "portfolio composition to support WAM decision-making."
         ),
         "extra_label": "Products Covered:",
         "extra_value": " Liquid Assets",
@@ -157,9 +163,10 @@ TILES = [
     {
         "title": "Alternative Market Sizing",
         "desc": (
-            "Alternative market sizing analysis providing data-driven estimates of addressable "
-            "market opportunities across Wealth & Asset Management to "
-            "support strategic planning and growth assessment."
+            "Data-driven market sizing analysis providing estimates of addressable "
+            "opportunities across Wealth & Asset Management. The analysis supports "
+            "market prioritization, strategic planning,"
+            " opportunity assessment, and evaluation of potential growth areas."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -167,7 +174,7 @@ TILES = [
         "badge": "On Demand",
         "meta": " ",
         "icon": "Icons/Strategy_Landing/capital_market_tsr.jpg",
-        "href": "mailto:NewDelhiBCNFSWAM@Bain.com",
+        "href": "https://bainandcompany-my.sharepoint.com/:p:/g/personal/aditya_a_bain_com/IQAweI8rRKcJRIz9rQ1okajwAejgJCiI5YHNvyKAF55GmxE?e=1nsyrJ",
     },
 ]
 
@@ -343,9 +350,10 @@ layout = html.Div(
         ),
         html.P(
             [
-                "Access wealth and asset management insights for WAM,"
-                " featuring AM & WM dashboards, Liquid Assets Dashboard, "
-                "Market Maps, WM decks, and competitive market intelligence.",
+                "Access a comprehensive suite of WAM strategy and market intelligence resources, "
+                "including Financial KPI benchmarking, Liquid Assets Dashboards, Market Maps, Market Sizing, Wealth Management Decks, "
+                "and Competitive Market Insights. These tools bring together relevant data and perspectives to support benchmarking,"
+                " market assessment, and strategic decision-making.",
             ],
             style={
                 "color": "#777",

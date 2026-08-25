@@ -84,9 +84,10 @@ TILES = [
     {
         "title": "ET Regression",
         "desc": (
-            "ET regression analysis for wealth and asset managers model "
-            "drivers of performance, isolate factor effects, and stress key "
-            "assumptions across peer and portfolio views."
+            "Advanced ET regression analysis for Wealth & Asset Management, "
+            "designed to identify key performance drivers, "
+            "isolate individual factor effects, and test critical "
+            "assumptions across peer groups and portfolio perspectives."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -99,8 +100,11 @@ TILES = [
     {
         "title": "Thinker, Doer, Watcher Analysis",
         "desc": (
-            "Thinker / Doer / Watcher operating-model diagnostics map role "
-            "archetypes, capacity, and decision rights across WAM organisations."
+            "A structured Thinker / Doer / Watcher operating"
+            " model diagnostic that assesses role archetypes, organizational capacity, and"
+            " decision rights across WAM organizations. "
+            "The analysis supports a clearer understanding of "
+            "operating model effectiveness and opportunities for organizational improvement."
         ),
         "extra_label": "Contact",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
@@ -284,9 +288,10 @@ layout = html.Div(
         ),
         html.P(
             [
-                "Comparative analysis on ET analysis covering"
-                " ET regression and Thinker, doer, "
-                "watcher analysis.",
+                "Access targeted performance driver and operating model "
+                "analytics for the WAM sector, combining ET Regression with Thinker / Doer / Watcher analysis. "
+                "These tools support a structured assessment of performance drivers, "
+                "organizational roles, capacity, and decision rights.",
             ],
             style={
                 "color": "#777",

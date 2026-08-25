@@ -5,7 +5,7 @@ from dash import html, register_page
 
 from page_helpers import coming_soon_ribbon
 
-register_page(__name__, path="/customer/", name="Customer", title="Customer | TROVE WAM")
+register_page(__name__, path="/ma/", name="M&A", title="M&A | TROVE WAM")
 
 RED = "#C00000"
 GREY_BAR = "#5a5a5a"
@@ -15,8 +15,8 @@ _BLACK_T = 30
 _ICON_CANDIDATES = [
     os.path.join("Icons", "Strat", "Placeholder.png"),
     os.path.join("Icons", "Strat", "placeholder.png"),
+    os.path.join("Icons", "MA_R.png"),
     os.path.join("Icons", "strategy icons", "placeholder.png"),
-    os.path.join("Icons", "Customer_R.png"),
 ]
 
 
@@ -48,7 +48,7 @@ def _ensure_clear_png(src_rel: str) -> str:
                 src_full = os.path.join(_ASSETS, src_rel.replace("/", os.sep))
                 break
         else:
-            return src_rel if src_rel.lower().endswith(".png") else "Icons/Customer_R.png"
+            return src_rel if src_rel.lower().endswith(".png") else "Icons/Strat/Placeholder.png"
 
     base, ext = os.path.splitext(src_rel)
     if ext.lower() in (".png", ".jpg", ".jpeg"):
@@ -84,37 +84,36 @@ def _icon_url(icon_rel: str | None = None) -> str:
 
 TILES = [
     {
-        "title": "Social Sentiment Analysis",
+        "title": "M&A Tracker",
         "desc": (
-            "Structured social sentiment analysis for Wealth & "
-            "Asset Management, providing insights into brand perception, customer "
-            "voice, and emerging market signals across "
-            "digital and social channels. The analysis supports a "
-            "deeper understanding of customer sentiment and evolving market perceptions."
+            "A structured view of mergers and acquisitions"
+            " activity across Wealth & Asset Management, covering deal flow, "
+            "transaction valuations, and strategic rationale. The tracker "
+            "supports the assessment of market activity, "
+            "consolidation trends, and evolving strategic priorities across the sector."
         ),
         "extra_label": "Contact:",
         "extra_value": " Please reach out to NewDelhiBCNFSWAM@bain.com for customized analysis.",
         "live": False,
-        "badge": "On Demand",
+        "badge": "Claude Artifact",
         "meta": " ",
-        "icon": "Icons/Module_Aura.png",
-        "href": "https://bainandcompany-my.sharepoint.com/:p:/g/personal/aditya_a_bain_com/IQCaDQj5AUL6QZXZbvNBjLDiAZt95urw4VBmUcvCkg2avLY?e=dfBkTa",
+        "icon": "Icons/market-overview-wbrp.jpg",
+        "href": "https://claude.ai/artifacts/latest/4716e4c5-0f7a-4dbf-a8f9-054a28bbe26e",
     },
     {
         "title": "Coming Soon",
         "desc": (
-            "Additional customer analytics modules are currently "
-            "under development and will be introduced to "
-            "further expand the range of customer insights "
-            "available through the platform."
+            "Additional M&A analytics modules are currently"
+            " under development and will be introduced to broaden "
+            "the range of transaction insights available through the platform."
         ),
         "extra_label": "Status:",
         "extra_value": " In development.",
         "live": False,
-        "badge": "On Demand",
-        "meta": " ",
+        "badge": "",
+        "meta": "",
         "icon": "",
-        "href": "#",
+        "href": "",
     },
 ]
 
@@ -200,7 +199,7 @@ def _tile(t: dict):
             html.Div(
                 html.Img(
                     src=_icon_url(t.get("icon")),
-                    alt="Customer",
+                    alt="M&A",
                     style={
                         "width": "120px",
                         "height": "120px",
@@ -327,7 +326,7 @@ def _tile(t: dict):
 layout = html.Div(
     [
         html.H1(
-            "Customer: Social Sentiment Analysis",
+            "M&A: Mergers & Acquisitions",
             style={
                 "fontSize": "clamp(1.25rem, 1.85vw, 1.55rem)",
                 "fontWeight": "800",
@@ -340,11 +339,10 @@ layout = html.Div(
         ),
         html.P(
             [
-                "Access focused customer insight"
-                " and market sentiment analytics "
-                "for the WAM sector, designed to provide a clearer "
-                "understanding of customer perceptions, brand positioning, "
-                "and emerging market signals.",
+                "Access focused M&A analytics for "
+                "the WAM sector, providing structured perspectives on transaction activity,"
+                " market dynamics, valuations, and strategic "
+                "deal trends across Wealth & Asset Management. ",
             ],
             style={
                 "color": "#777",

@@ -616,6 +616,65 @@ html, body {
   white-space: nowrap;
 }
 
+.strat-coming-soon-ribbon-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 156px;
+  height: 156px;
+  overflow: hidden;
+  border-top-left-radius: 24px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.strat-coming-soon-ribbon {
+  position: absolute;
+  top: 36px;
+  left: -46px;
+  width: 192px;
+  padding: 10px 0;
+  background: var(--trove-red);
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(-45deg);
+  transform-origin: center center;
+  font-family: var(--font);
+  line-height: 1.1;
+  pointer-events: none;
+}
+
+.strat-tile-inner:has(.strat-coming-soon-ribbon-wrap) > div:not(.strat-coming-soon-ribbon-wrap) {
+  padding-top: 16px;
+}
+
+.strat-tile-has-ribbon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.strat-tile-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  position: relative;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+}
+
 .module-placeholder { padding: 24px 0; }
 .module-placeholder h2 { color: var(--trove-red); margin-bottom: 8px; }
 .module-back { margin-top: 20px; }

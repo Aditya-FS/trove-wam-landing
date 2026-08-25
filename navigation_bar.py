@@ -38,7 +38,7 @@ NAV_SECTIONS = [
     },
     {
         "id": "pi-cost",
-        "label": "Cost / PI",
+        "label": "PI/ Cost",
         "href": "/pi-cost/",
         "icon_r": "PI_R.png",
         "icon_s": "PI_S.png",
@@ -59,6 +59,14 @@ NAV_SECTIONS = [
         "icon_r": "Customer_R.png",
         "icon_s": "Customer_S.png",
         "path_prefixes": ["/customer"],
+    },
+    {
+        "id": "ma",
+        "label": "M&A",
+        "href": "/ma/",
+        "icon_r": "Tech_R.png",
+        "icon_s": "Tech_S.png",
+        "path_prefixes": ["/ma"],
     },
 ]
 
