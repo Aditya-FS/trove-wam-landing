@@ -11,15 +11,12 @@ except Exception as _icon_err:
 
 import dash
 from dash import html, dcc, Input, Output, callback
-from flask import request
 import dash_bootstrap_components as dbc
 
 from whats_new_popup import (
-    ENABLE_WHATS_NEW_AUTO_OPEN,
     build_whats_new_body_children,
     build_whats_new_popup,
     get_active_whats_new_content,
-    has_ip_seen_whats_new_version,
 )
 
 app = dash.Dash(
@@ -45,8 +42,7 @@ app.layout = html.Div(
         dcc.Location(id="url", refresh=False),
         html.Div([header]),
         build_whats_new_popup(),
-        html.Div([nav_bar], id="container_body", className="no-breadcrumbs"),
-        dcc.Store(id="store_visitor_info", storage_type="session"),
+        html.Div([nav_bar], id="container_body"),
     ]
 )
 
@@ -88,51 +84,15 @@ def render_whats_new_popup_content(content):
 
 @callback(
     Output("store_whats_new_popup_state", "data"),
-    [
-        Input("url", "pathname"),
-        Input("store_whats_new_popup_content", "data"),
-        Input("btn-whats-new-open", "n_clicks_timestamp"),
-    ],
-    prevent_initial_call=False,
+    Input("btn-whats-new-open", "n_clicks_timestamp"),
+    Input("store_whats_new_popup_content", "data"),
+    prevent_initial_call=True,
 )
-def update_whats_new_popup_state(pathname, popup_content, open_click_timestamp):
+def open_whats_new_popup(open_click_timestamp, popup_content):
     popup_content = popup_content or {}
-    has_active_version = bool(popup_content.get("has_active_version"))
-    popup_version_id = popup_content.get("id")
-    ctx = dash.callback_context
-
-    normalized = (pathname or "").rstrip("/")
-    home_paths = {"", "/wam", dash.get_relative_path(""), dash.get_relative_path("/")}
-    is_home = normalized in {(p or "").rstrip("/") for p in home_paths}
-
-    if not ctx.triggered:
-        seen = False
-        if has_active_version and popup_version_id:
-            seen = has_ip_seen_whats_new_version(request.remote_addr, popup_version_id)
-        return {
-            "open": ENABLE_WHATS_NEW_AUTO_OPEN
-            and has_active_version
-            and is_home
-            and not seen
-        }
-
-    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
-
-    if trigger_id == "btn-whats-new-open" and open_click_timestamp:
-        return {"open": has_active_version}
-
-    if trigger_id in {"url", "store_whats_new_popup_content"}:
-        seen = False
-        if has_active_version and popup_version_id:
-            seen = has_ip_seen_whats_new_version(request.remote_addr, popup_version_id)
-        return {
-            "open": ENABLE_WHATS_NEW_AUTO_OPEN
-            and has_active_version
-            and is_home
-            and not seen
-        }
-
-    return dash.no_update
+    if not open_click_timestamp or not popup_content.get("has_active_version"):
+        return dash.no_update
+    return {"open": True}
 
 
 @callback(
@@ -144,13 +104,7 @@ def update_whats_new_popup_state(pathname, popup_content, open_click_timestamp):
     prevent_initial_call=True,
 )
 def close_whats_new_popup(_close_ts, _footer_ts):
-    ctx = dash.callback_context
-    if not ctx.triggered:
-        return dash.no_update
-    trigger_id = ctx.triggered[0]["prop_id"].split(".")[0]
-    if trigger_id in {"btn-whats-new-close", "btn-whats-new-footer-close"}:
-        return {"open": False}
-    return dash.no_update
+    return {"open": False}
 
 
 @callback(

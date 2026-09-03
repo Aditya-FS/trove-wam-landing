@@ -26,10 +26,10 @@ TILES = [
     {
         "label": "Strategy",
         "detail": "KPI Benchmarking, Liquid Assets Dashboard, Market Maps, Alternative Market Sizing, Wealth Management Decks ",
-        "hover": "Access a comprehensive suite of WAM strategy and market intelligence resources, "
+        "hover": "Access a comprehensive suite of WAM strategy and market intelligence resources "
                 "including financial KPI benchmarking, liquid asset dashboards, market maps, market sizing, Wealth Management decks, "
                 "and competitive market insights. These tools bring together relevant data and perspectives to support benchmarking,"
-                " market assessment, and strategic decision-making.",
+                " market assessment and strategic decision-making.",
         "href": "/strategy/",
         "image": _pick_image("Strategy.jpg"),
     },
@@ -39,7 +39,7 @@ TILES = [
         "hover": "Access focused capital markets analytics for the WAM sector, "
                 "combining Total Shareholder Return (TSR) benchmarking with BGW analysis. "
                 "These tools provide structured perspectives on market "
-                "performance, value creation, strategic positioning, and future growth potential.",
+                "performance, value creation, strategic positioning and future growth potential.",
         "href": "/capital-markets/",
         "image": _pick_image(
             "Capital Market.jpg"
@@ -79,7 +79,7 @@ TILES = [
     },
     {
         "label": "M&A",
-        "detail": "Mergers & Acquisitions analytics",
+        "detail": "Mergers & Acquisitions Tracker",
         "hover": "Access focused M&A analytics for "
                 "the WAM sector, providing structured perspectives on transaction activity,"
                 " market dynamics, valuations, and strategic "
@@ -105,7 +105,7 @@ def _tile(tile: dict):
                 className="home-tile-media",
             ),
             html.Div(
-                html.Div(
+                html.P(
                     [
                         html.Span(f"{tile['label']}: ", className="home-tile-label"),
                         html.Span(tile["detail"], className="home-tile-detail"),
@@ -136,10 +136,10 @@ layout = html.Div(
                         ),
                         html.P(
                             [
-                                "WAM Trove is a comprehensive platform that brings together consolidated data, "
-                                "market intelligence, and actionable insights across the Wealth & Asset Management sector."
-                                " It provides a unified view across key modules, including Asset Management KPIs, Wealth Management KPIs,"
-                                " TSR, Sector Analysis, Market Maps and more. Enabling users to efficiently access and navigate relevant market knowledge. ",
+                                "WAM Trove is a comprehensive platform that brings together consolidated data, market intelligence "
+                                "and actionable insights for the Wealth & Asset Management sector across key modules, including "
+                                "Asset Management KPIs, Wealth Management KPIs, TSR, Sector Analysis, Market Maps and more."
+,
                             ],
                             className="home-hero-text",
                         ),

@@ -1,8 +1,6 @@
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
-ENABLE_WHATS_NEW_AUTO_OPEN = False
-
 
 def get_active_whats_new_content():
     return {
@@ -66,7 +64,3 @@ def build_whats_new_popup():
             ),
         ]
     )
-
-
-def has_ip_seen_whats_new_version(ip_address, version_id):
-    return False
